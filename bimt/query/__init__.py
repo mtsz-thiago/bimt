@@ -1,5 +1,9 @@
 import bimt.query.cfg
-import bimt.query.processor
+
+from bimt.query.cfg import config
+from bimt.query.processor import ProcessQuery
+
+import xml.etree.ElementTree as ET
 
 if __name__ == "__main__":
     pass
