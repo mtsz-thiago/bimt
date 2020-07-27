@@ -10,9 +10,13 @@ class TestQuery(unittest.TestCase):
         self.assertEqual(config["DEFAULT"]["CONSULTAS"], 'output/consultas.csv')
         self.assertEqual(config["DEFAULT"]["ESPERADOS"], 'output/esperados.csv')
 
-    def test_write_consulta_file(self):
+    def test_write_consultas_file(self):
         query_processor = ProcessQuery.get()
         query_processor.write_consultas_file()
-        
+    
+    def test_write_esperados_file(self):
+        query_processor = ProcessQuery.get()
+        query_processor.write_esperados_file()
+
 if __name__ == '__main__':
     unittest.main()
