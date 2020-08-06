@@ -31,8 +31,8 @@ class InvertedIndex():
 
     def __init__(self, corpus):
         self.corpus_df = pd.DataFrame(corpus)
-        corps_tokenized = self.tokenize(self.corpus_df)
-        self.create_inverted_list_df(corps_tokenized)
+        self.corps_tokenized = self.tokenize(self.corpus_df)
+        self.create_inverted_list_df(self.corps_tokenized)
         self.write_fo_file(config["DEFAULTS"]["ESCREVA"])
 
     def tokenize(self, corpus):
